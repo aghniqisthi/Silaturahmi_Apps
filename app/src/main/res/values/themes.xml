@@ -1,0 +1,68 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Silaturahmi" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/green</item>
+        <item name="colorSecondaryContainer">#E3F2B2</item>
+
+            <!-- Primary brand color. -->
+<!--            <item name="colorPrimaryVariant">#388E3C / @color/purple_700</item>-->
+            <item name="colorOnPrimary">@color/white</item>
+            <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.Silaturahmi" parent="Base.Theme.Silaturahmi" />
+
+    <style name="materialButton" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/button_state_colors</item>
+        <item name="android:textColor">@color/button_text_state_colors</item>
+        <item name="android:radius">100dp</item>
+    </style>
+
+    <style name="outlineRedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/button_outline_state_colors</item>
+        <item name="android:textColor">@color/button_outline_state_colors</item>
+
+ </style>
+
+    <style name="BodyBold">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="fontWeight">700</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Heading5Bold">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="fontWeight">700</item>
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="TabStyle">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="fontWeight">600</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CaptionRegular">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="fontWeight">400</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ThemeOverlay.App.DatePicker" parent="@style/ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="backgroundColor">@color/white</item>
+<!--        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>-->
+<!--        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent</item>-->
+        <!-- Customize text field of the text input mode. -->
+<!--        <item name="textInputStyle">@style/Widget.App.TextInputLayout</item>-->
+    </style>
+
+    <style name="TimePickerTheme" parent="@style/ThemeOverlay.MaterialComponents.TimePicker">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorOnSurface">#1D3823</item>
+        <item name="colorPrimaryContainer">#ECF3EE</item>
+        <item name="colorSurface">@color/white</item>
+    </style>
+</resources>

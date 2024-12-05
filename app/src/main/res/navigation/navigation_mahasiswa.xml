@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_mahasiswa"
+    app:startDestination="@id/homeMhsFragment">
+
+    <fragment
+        android:id="@+id/homeMhsFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.homenavbar.HomeMhsFragment"
+        android:label="fragment_home_mhs"
+        tools:layout="@layout/fragment_home_mhs" >
+        <action
+            android:id="@+id/action_homeMhsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeMhsFragment_to_riwayatBimbinganFragment"
+            app:destination="@id/riwayatBimbinganFragment" />
+        <action
+            android:id="@+id/action_homeMhsFragment_to_messageActiveFragment"
+            app:destination="@id/messageActiveFragment" />
+        <action
+            android:id="@+id/action_homeMhsFragment_to_listLogbookFragment"
+            app:destination="@id/listLogbookFragment" />
+        <action
+            android:id="@+id/action_homeMhsFragment_to_riwayatFragment"
+            app:destination="@id/riwayatFragment" />
+        <action
+            android:id="@+id/action_homeMhsFragment_to_listLuaranFragment"
+            app:destination="@id/listLuaranFragment" />
+        <action
+            android:id="@+id/action_homeMhsFragment_to_listNilaiAkhirFragment"
+            app:destination="@id/listNilaiAkhirFragment" />
+        <action
+            android:id="@+id/action_homeMhsFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.homenavbar.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeMhsFragment"
+            app:destination="@id/homeMhsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/riwayatBimbinganFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.pembimbing.message.RiwayatBimbinganFragment"
+        android:label="fragment_riwayat_bimbingan"
+        tools:layout="@layout/fragment_riwayat_bimbingan" >
+        <action
+            android:id="@+id/action_riwayatBimbinganFragment_to_homeMhsFragment"
+            app:destination="@id/homeMhsFragment" />
+        <action
+            android:id="@+id/action_riwayatBimbinganFragment_to_messageRiwayatFragment"
+            app:destination="@id/messageRiwayatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageRiwayatFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.pembimbing.message.MessageRiwayatFragment"
+        android:label="fragment_message_riwayat"
+        tools:layout="@layout/fragment_message_riwayat" >
+        <action
+            android:id="@+id/action_messageRiwayatFragment_to_riwayatBimbinganFragment"
+            app:destination="@id/riwayatBimbinganFragment" />
+        <action
+            android:id="@+id/action_messageRiwayatFragment_to_detailGroupChatsFragment"
+            app:destination="@id/detailGroupChatsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageActiveFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.homenavbar.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" >
+        <action
+            android:id="@+id/action_messageActiveFragment_to_homeMhsFragment"
+            app:destination="@id/homeMhsFragment" />
+        <action
+            android:id="@+id/action_messageActiveFragment_to_detailGroupChatsFragment"
+            app:destination="@id/detailGroupChatsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listLogbookFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.logbook.ListLogbookFragment"
+        android:label="fragment_list_logbook"
+        tools:layout="@layout/fragment_list_logbook" >
+        <action
+            android:id="@+id/action_listLogbookFragment_to_homeMhsFragment"
+            app:destination="@id/homeMhsFragment" />
+        <action
+            android:id="@+id/action_listLogbookFragment_to_tambahLogbookFragment"
+            app:destination="@id/tambahLogbookFragment" />
+        <action
+            android:id="@+id/action_listLogbookFragment_to_detailLogbookFragment"
+            app:destination="@id/detailLogbookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tambahLogbookFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.logbook.TambahLogbookFragment"
+        android:label="fragment_tambah_logbook"
+        tools:layout="@layout/fragment_tambah_logbook" >
+        <action
+            android:id="@+id/action_tambahLogbookFragment_to_listLogbookFragment"
+            app:destination="@id/listLogbookFragment" />
+        <action
+            android:id="@+id/action_tambahLogbookFragment_to_detailLogbookFragment"
+            app:destination="@id/detailLogbookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailLogbookFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.logbook.DetailLogbookFragment"
+        android:label="fragment_detail_logbook"
+        tools:layout="@layout/fragment_detail_logbook" >
+        <action
+            android:id="@+id/action_detailLogbookFragment_to_listLogbookFragment"
+            app:destination="@id/listLogbookFragment" />
+        <action
+            android:id="@+id/action_detailLogbookFragment_to_tambahLogbookFragment"
+            app:destination="@id/tambahLogbookFragment" />
+        <action
+            android:id="@+id/action_detailLogbookFragment_to_editLogbookFragment"
+            app:destination="@id/editLogbookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/riwayatFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.riwayat.RiwayatFragment"
+        android:label="fragment_riwayat"
+        tools:layout="@layout/fragment_riwayat" >
+        <action
+            android:id="@+id/action_riwayatFragment_to_detailRiwayatFragment"
+            app:destination="@id/detailRiwayatFragment" />
+        <action
+            android:id="@+id/action_riwayatFragment_to_homeMhsFragment"
+            app:destination="@id/homeMhsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailRiwayatFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.riwayat.DetailRiwayatFragment"
+        android:label="fragment_detail_riwayat"
+        tools:layout="@layout/fragment_detail_riwayat" >
+        <action
+            android:id="@+id/action_detailRiwayatFragment_to_riwayatFragment"
+            app:destination="@id/riwayatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listLuaranFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.luaran.ListLuaranFragment"
+        android:label="fragment_list_luaran"
+        tools:layout="@layout/fragment_list_luaran" >
+        <action
+            android:id="@+id/action_listLuaranFragment_to_homeMhsFragment"
+            app:destination="@id/homeMhsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listNilaiAkhirFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.luaran.NilaiAkhirFragment"
+        android:label="fragment_list_nilai_akhir"
+        tools:layout="@layout/fragment_list_nilai_akhir" >
+        <action
+            android:id="@+id/action_listNilaiAkhirFragment_to_homeMhsFragment"
+            app:destination="@id/homeMhsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editLogbookFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.logbook.EditLogbookFragment"
+        android:label="fragment_edit_logbook"
+        tools:layout="@layout/fragment_edit_logbook" >
+        <action
+            android:id="@+id/action_editLogbookFragment_to_detailLogbookFragment"
+            app:destination="@id/detailLogbookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.notif.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_notificationFragment_to_homeMhsFragment"
+            app:destination="@id/homeMhsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailGroupChatsFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.pembimbing.message.DetailGroupChatsFragment"
+        android:label="fragment_detail_group_chats"
+        tools:layout="@layout/fragment_detail_group_chats" >
+        <action
+            android:id="@+id/action_detailGroupChatsFragment_to_messageRiwayatFragment"
+            app:destination="@id/messageRiwayatFragment" />
+        <action
+            android:id="@+id/action_detailGroupChatsFragment_to_messageActiveFragment"
+            app:destination="@id/messageActiveFragment" />
+    </fragment>
+</navigation>
