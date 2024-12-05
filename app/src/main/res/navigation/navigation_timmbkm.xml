@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_timmbkm"
+    app:startDestination="@id/homeDosenFragment">
+
+    <fragment
+        android:id="@+id/mbkmFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.timmbkm.MbkmFragment"
+        android:label="fragment_mbkm"
+        tools:layout="@layout/fragment_mbkm" >
+        <action
+            android:id="@+id/action_mbkmFragment_to_homeDosenFragment"
+            app:destination="@id/homeDosenFragment" />
+        <action
+            android:id="@+id/action_mbkmFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_mbkmFragment_to_pendaftarMagangMbkmFragment"
+            app:destination="@id/pendaftarMagangMbkmFragment" />
+        <action
+            android:id="@+id/action_mbkmFragment_to_setPembimbingMbkmFragment"
+            app:destination="@id/plottingDosenFragment" />
+        <action
+            android:id="@+id/action_mbkmFragment_to_plottingFragment"
+            app:destination="@id/plottingFragment" />
+        <action
+            android:id="@+id/action_mbkmFragment_to_detailPlottingFragment"
+            app:destination="@id/detailPlottingFragment" />
+        <action
+            android:id="@+id/action_mbkmFragment_to_detailPendaftarMagangFragment"
+            app:destination="@id/detailPendaftarMagangFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pendaftarMagangMbkmFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.timmbkm.pendaftarmagang.PendaftarMagangMbkmFragment"
+        android:label="fragment_pendaftar_magang_mbkm"
+        tools:layout="@layout/fragment_pendaftar_magang_mbkm" >
+        <action
+            android:id="@+id/action_pendaftarMagangMbkmFragment_to_mbkmFragment"
+            app:destination="@id/mbkmFragment" />
+        <action
+            android:id="@+id/action_pendaftarMagangMbkmFragment_to_setPembimbingMbkmFragment"
+            app:destination="@id/plottingDosenFragment" />
+        <action
+            android:id="@+id/action_pendaftarMagangMbkmFragment_to_detailPendaftarMagangFragment"
+            app:destination="@id/detailPendaftarMagangFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.homenavbar.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/homeDosenFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.HomeDosenFragment"
+        android:label="fragment_home_dosen"
+        tools:layout="@layout/fragment_home_dosen" >
+        <action
+            android:id="@+id/action_homeDosenFragment_to_mbkmFragment"
+            app:destination="@id/mbkmFragment" />
+        <action
+            android:id="@+id/action_homeDosenFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPlottingFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.kaprodi.DetailPlottingFragment"
+        android:label="fragment_detail_plotting"
+        tools:layout="@layout/fragment_detail_plotting" >
+        <action
+            android:id="@+id/action_detailPlottingFragment_to_plottingFragment"
+            app:destination="@id/plottingFragment" />
+        <action
+            android:id="@+id/action_detailPlottingFragment_to_mbkmFragment"
+            app:destination="@id/mbkmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPendaftarMagangFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.timmbkm.pendaftarmagang.DetailPendaftarMagangFragment"
+        android:label="fragment_detail_pendaftar_magang"
+        tools:layout="@layout/fragment_detail_pendaftar_magang" >
+        <action
+            android:id="@+id/action_detailPendaftarMagangFragment_to_pendaftarMagangMbkmFragment"
+            app:destination="@id/pendaftarMagangMbkmFragment" />
+        <action
+            android:id="@+id/action_detailPendaftarMagangFragment_to_listLogbookFragment"
+            app:destination="@id/listLogbookFragment" />
+        <action
+            android:id="@+id/action_detailPendaftarMagangFragment_to_mbkmFragment"
+            app:destination="@id/mbkmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/plottingFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.kaprodi.PlottingFragment"
+        android:label="fragment_plotting"
+        tools:layout="@layout/fragment_plotting" >
+        <action
+            android:id="@+id/action_plottingFragment_to_mbkmFragment"
+            app:destination="@id/mbkmFragment" />
+        <action
+            android:id="@+id/action_plottingFragment_to_detailPlottingFragment"
+            app:destination="@id/detailPlottingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listLogbookFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.logbook.ListLogbookFragment"
+        android:label="fragment_list_logbook"
+        tools:layout="@layout/fragment_list_logbook" >
+        <action
+            android:id="@+id/action_listLogbookFragment_to_detailPendaftarMagangFragment"
+            app:destination="@id/detailPendaftarMagangFragment" />
+        <action
+            android:id="@+id/action_listLogbookFragment_to_detailLogbookFragment"
+            app:destination="@id/detailLogbookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailLogbookFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.logbook.DetailLogbookFragment"
+        android:label="fragment_detail_logbook"
+        tools:layout="@layout/fragment_detail_logbook" >
+        <action
+            android:id="@+id/action_detailLogbookFragment_to_listLogbookFragment"
+            app:destination="@id/listLogbookFragment" />
+    </fragment>
+</navigation>

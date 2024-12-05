@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.captain_miao.optroundcardview.OptRoundCardView
+    app:optRoundCardCornerRadius="20dp"
+    app:optRoundCardLeftBottomCorner="false"
+    app:optRoundCardRightBottomCorner="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Filter"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/periode"
+            android:text="Periode"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/filter"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/poppins_semibold"-->
+<!--            android:text="Lihat Semua >"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textColor="#458654"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/periode"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/periode" />-->
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/periode" >
+
+            <RadioGroup
+                android:id="@+id/radioGroupPeriode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"/>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/status"
+            android:text="Status"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/scrollview"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/poppins_semibold"-->
+<!--            android:text="Lihat Semua >"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textColor="#458654"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/status"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/status" />-->
+
+            <RadioGroup
+                android:id="@+id/radioGroupStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/status" >
+
+                <RadioButton
+                    android:id="@+id/radioBtnBelum"
+                    android:text="Belum Dosen Pembimbing"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:id="@+id/radioBtnSudah"
+                    android:text="Sudah Dosen Pembimbing"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RadioGroup>
+
+        <LinearLayout
+            android:layout_marginVertical="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupStatus">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_batal"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_semibold"
+                android:textAllCaps="false"
+                android:text="Batal"
+                android:textColor="#EC221F"
+                android:textSize="14sp"
+                app:strokeColor="#EC221F" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_perbarui"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:backgroundTint="#6A9E76"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Perbarui"
+                android:textColor="#ECF3EE"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.github.captain_miao.optroundcardview.OptRoundCardView>

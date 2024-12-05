@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".mahasiswa.daftar.PilihPaketKonversiFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Pilih Paket Konversi"
+        app:titleTextAppearance="@style/BodyBold"
+        app:titleTextColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:id="@+id/edit_textbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="16dp"
+            android:background="@null"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Cari"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:textSize="16sp" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_search"
+        app:icon="@drawable/round_search_24"
+        app:iconSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView4"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="10dp"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        app:iconTint="#7A7A7A"
+        android:backgroundTint="@color/white"
+        app:strokeColor="#7A7A7A" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_listpaket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/card_pilihpaketkonversi" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:translationZ="50dp"
+        android:indeterminateTint="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

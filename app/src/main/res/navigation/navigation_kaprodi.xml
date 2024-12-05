@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_kaprodi"
+    app:startDestination="@id/homeDosenFragment">
+
+    <fragment
+        android:id="@+id/homeDosenFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.HomeDosenFragment"
+        android:label="fragment_home_dosen"
+        tools:layout="@layout/fragment_home_dosen" >
+        <action
+            android:id="@+id/action_homeDosenFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeDosenFragment_to_plottingDosenFragment"
+            app:destination="@id/plottingDosenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/plottingDosenFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.kaprodi.PlottingFragment"
+        android:label="fragment_plotting"
+        tools:layout="@layout/fragment_plotting" >
+        <action
+            android:id="@+id/action_plottingDosenFragment_to_homeDosenFragment"
+            app:destination="@id/homeDosenFragment" />
+        <action
+            android:id="@+id/action_plottingDosenFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_plottingDosenFragment_to_detailPlottingFragment"
+            app:destination="@id/detailPlottingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.homenavbar.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_plottingDosenFragment"
+            app:destination="@id/plottingDosenFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_homeDosenFragment"
+            app:destination="@id/homeDosenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPlottingFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.kaprodi.DetailPlottingFragment"
+        android:label="fragment_detail_plotting"
+        tools:layout="@layout/fragment_detail_plotting" >
+        <action
+            android:id="@+id/action_detailPlottingFragment_to_plottingDosenFragment"
+            app:destination="@id/plottingDosenFragment" />
+    </fragment>
+</navigation>

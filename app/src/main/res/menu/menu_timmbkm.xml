@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeDosenFragment"
+        android:icon="@drawable/rounded_home_24"
+        android:title="Beranda"/>
+
+    <item
+        android:id="@+id/mbkmFragment"
+        android:icon="@drawable/rounded_info_24"
+        android:title="MBKM"/>
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/rounded_person_24"
+        android:title="Profil"/>
+</menu>

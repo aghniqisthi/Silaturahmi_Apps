@@ -22,8 +22,7 @@
     <style name="outlineRedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="strokeColor">@color/button_outline_state_colors</item>
         <item name="android:textColor">@color/button_outline_state_colors</item>
-
- </style>
+    </style>
 
     <style name="BodyBold">
         <item name="fontFamily">@font/poppins_bold</item>

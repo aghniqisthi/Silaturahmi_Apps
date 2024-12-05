@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECF3EE"
+    tools:context=".mahasiswa.logbook.DetailLogbookFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Detail Logbook"
+        app:titleTextAppearance="@style/BodyBold"
+        app:titleTextColor="@color/black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="14dp">
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:src="@drawable/rounded_calendar_today_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tgl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Tanggal Kegiatan"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/imageView1"
+                        app:layout_constraintStart_toEndOf="@id/imageView1"
+                        app:layout_constraintTop_toTopOf="@id/imageView1" />
+
+                    <TextView
+                        android:id="@+id/txt_tanggal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@id/tgl" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:src="@drawable/round_schedule_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_tanggal" />
+
+                    <TextView
+                        android:id="@+id/jam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Jam Kegiatan"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/imageView2"
+                        app:layout_constraintStart_toEndOf="@id/imageView2"
+                        app:layout_constraintTop_toTopOf="@id/imageView2" />
+
+                    <TextView
+                        android:id="@+id/txt_jam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@id/jam" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:src="@drawable/rounded_format_list_bulleted_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_jam" />
+
+                    <TextView
+                        android:id="@+id/ket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Keterangan"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/imageView3"
+                        app:layout_constraintStart_toEndOf="@id/imageView3"
+                        app:layout_constraintTop_toTopOf="@id/imageView3" />
+
+                    <TextView
+                        android:id="@+id/txt_ket"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@id/ket" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:src="@drawable/rounded_attach_file_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_ket" />
+
+                    <TextView
+                        android:id="@+id/docs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Dokumen Pendukung"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/imageView4"
+                        app:layout_constraintStart_toEndOf="@id/imageView4"
+                        app:layout_constraintTop_toTopOf="@id/imageView4" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_docslogbook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/docs"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/button_docslogbook" />
+
+                    <TextView
+                        android:id="@+id/emptydata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Tidak ada Dokumen Pendukung"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toTopOf="@+id/rv_docslogbook" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_edit"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_weight="1"
+                android:backgroundTint="#6A9E76"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Edit Data Logbook"
+                android:textAllCaps="false"
+                android:textColor="#ECF3EE"
+                android:textSize="14sp"
+                app:cornerRadius="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/cardView11" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_delete"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Hapus Data Logbook"
+                android:textAllCaps="false"
+                android:textColor="#EC221F"
+                android:textSize="14sp"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_edit"
+                app:strokeColor="#EC221F"
+                tools:layout_editor_absoluteX="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

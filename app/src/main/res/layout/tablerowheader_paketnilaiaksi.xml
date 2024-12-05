@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:weightSum="21"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/txt_kodemk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Kode" />
+
+    <TextView
+        android:id="@+id/txt_mk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:layout_weight="7"
+        android:ellipsize="none"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Mata Kuliah"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:id="@+id/txt_sksmk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:layout_marginHorizontal="4dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="SKS"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/txt_nilaimk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:layout_marginHorizontal="4dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Nilai"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/txt_aksimk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:layout_marginHorizontal="6dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Aksi"
+        android:textAlignment="center" />
+
+</TableRow>
+

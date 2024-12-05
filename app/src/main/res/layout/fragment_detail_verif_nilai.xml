@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECF3EE"
+    tools:context=".dosen.pembimbing.verifnilai.DetailVerifNilaiFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Penilaian Magang"
+        app:titleTextAppearance="@style/BodyBold"
+        app:titleTextColor="@color/black" />
+
+    <ScrollView
+        android:id="@+id/scorllbiew"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toTopOf="@id/linearlayout"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Detail Mahasiswa"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearprogram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/detail">
+
+                <com.github.captain_miao.optroundcardview.OptRoundCardView
+                    android:id="@+id/card_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:optRoundCardBackgroundColor="#FFCC00"
+                    app:optRoundCardCornerRadius="10dp"
+                    app:optRoundCardLeftBottomCorner="false"
+                    app:optRoundCardRightBottomCorner="false">
+
+                    <TextView
+                        android:id="@id/txt_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:text="Program Anda Belum Diverifikasi"
+                        android:textColor="#465A03"
+                        android:textSize="14sp" />
+
+                </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+                <com.github.captain_miao.optroundcardview.OptRoundCardView
+                    android:id="@+id/card_detailprogram"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:optRoundCardCornerRadius="10dp"
+                    app:optRoundCardLeftTopCorner="false"
+                    app:optRoundCardRightTopCorner="false" >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="14dp">
+
+                        <TextView
+                            android:id="@+id/npm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="NPM"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_npm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/npm" />
+
+                        <TextView
+                            android:id="@+id/nama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Nama Mahasiswa"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_npm" />
+
+                        <TextView
+                            android:id="@+id/txt_nama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/nama" />
+
+                        <TextView
+                            android:id="@+id/namaprodi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Nama Prodi"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_nama" />
+
+                        <TextView
+                            android:id="@+id/txt_namaprodi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/namaprodi" />
+
+
+                        <TextView
+                            android:id="@+id/nip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="NIP"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_namaprodi" />
+
+                        <TextView
+                            android:id="@+id/txt_nip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/nip" />
+
+                        <TextView
+                            android:id="@+id/namadospem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Nama Pembimbing MBKM"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_nip" />
+
+                        <TextView
+                            android:id="@+id/txt_namadospem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/namadospem" />
+
+                        <TextView
+                            android:id="@+id/posisi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Posisi Kegiatan Topik"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_namadospem" />
+
+                        <TextView
+                            android:id="@+id/txt_posisi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/posisi" />
+
+                        <TextView
+                            android:id="@+id/namamitra"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Nama Mitra/Perusahaan"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_posisi" />
+
+                        <TextView
+                            android:id="@+id/txt_namamitra"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/namamitra" />
+
+                        <TextView
+                            android:id="@+id/namaprogram"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Nama Program"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_namamitra" />
+
+                        <TextView
+                            android:id="@+id/txt_namaprogram"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/namaprogram" />
+
+                        <TextView
+                            android:id="@+id/jenismbkm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Nama Jenis MBKM"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_namaprogram" />
+
+                        <TextView
+                            android:id="@+id/txt_jenismbkm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/jenismbkm" />
+
+                        <TextView
+                            android:id="@+id/buktidaftar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Bukti Pendaftaran"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_jenismbkm" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_filebuktidaftar"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Lihat Dokumen"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="#458654"
+                            android:textSize="14sp"
+                            app:icon="@drawable/outline_text_snippet_24"
+                            app:iconPadding="10dp"
+                            app:layout_constraintTop_toBottomOf="@id/buktidaftar"
+                            app:strokeColor="#458654" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/penilaian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Penilaian Mitra"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearprogram" />
+
+            <LinearLayout
+                android:id="@+id/linear_nilai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/penilaian">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_penilaian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="10dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="14dp">
+
+                        <TextView
+                            android:id="@+id/waktuNilai"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Waktu"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_waktuNilai"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/waktuNilai" />
+
+                        <TextView
+                            android:id="@+id/nilaiakhir"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Nilai Akhir"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_waktuNilai" />
+
+                        <TextView
+                            android:id="@+id/txt_nilaiakhir"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/nilaiakhir" />
+
+                        <TextView
+                            android:id="@+id/ketNilai"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Keterangan"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_nilaiakhir" />
+
+                        <TextView
+                            android:id="@+id/txt_ketNilai"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/ketNilai" />
+
+                        <TextView
+                            android:id="@+id/fileNilai"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="File"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_ketNilai" />
+
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_fileNilai"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Lihat Dokumen"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="#458654"
+                            android:textSize="14sp"
+                            app:icon="@drawable/outline_text_snippet_24"
+                            app:iconPadding="10dp"
+                            app:layout_constraintTop_toBottomOf="@id/fileNilai"
+                            app:strokeColor="#458654" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/emptydata_nilai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Nilai belum diunggah"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/luaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Luaran"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_nilai" />
+
+            <LinearLayout
+                android:id="@+id/linear_luaran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/luaran">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_luaran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/card_luaran"/>
+
+                <TextView
+                    android:id="@+id/emptydata_luaran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Luaran belum diunggah"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/logbook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Log Kegiatan"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_luaran" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_logbook"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="14dp"
+                android:backgroundTint="@color/white"
+                android:elevation="4dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="start"
+                android:padding="16dp"
+                android:text="Detail Log Kegiatan"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:cornerRadius="10dp"
+                app:layout_constraintTop_toBottomOf="@id/logbook" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="20dp"
+                android:rotation="180"
+                android:src="@drawable/rounded_arrow_back_ios_new_24"
+                android:translationZ="4dp"
+                app:layout_constraintBottom_toBottomOf="@id/btn_logbook"
+                app:layout_constraintEnd_toEndOf="@id/btn_logbook"
+                app:layout_constraintTop_toTopOf="@id/btn_logbook"
+                app:tint="@color/black" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/green"
+                android:indeterminateTintMode="src_atop"
+                android:translationZ="50dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/paketkonversi"
+                app:layout_constraintStart_toEndOf="@+id/paketkonversi"
+                app:layout_constraintTop_toTopOf="@+id/paketkonversi" />
+
+            <TextView
+                android:id="@+id/paketkonversi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Paket Konversi"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_logbook" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_paketkonversi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/paketkonversi">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="14dp">
+
+                    <TextView
+                        android:id="@+id/txt_namapaketkonversi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Paket Konversi"
+                        android:textColor="@color/green"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_hidden"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_namapaketkonversi">
+
+                        <TableLayout
+                            android:id="@+id/tableLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TableRow
+                                android:id="@+id/tableRow"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="4dp" />
+
+                        </TableLayout>
+
+                        <TextView
+                            android:id="@+id/txt_totalsks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Total SKS : "
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_batal"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Batal"
+            android:textColor="#EC221F"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            app:strokeColor="#EC221F" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_setujui"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Setujui"
+            android:textAllCaps="false"
+            android:textColor="#ECF3EE"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_verif"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:indeterminate="true"
+        android:indeterminateTint="#FFEBEE"
+        android:indeterminateTintMode="src_atop"
+        android:translationZ="50dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/linearlayout"
+        app:layout_constraintEnd_toEndOf="@+id/linearlayout"
+        app:layout_constraintTop_toTopOf="@+id/linearlayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

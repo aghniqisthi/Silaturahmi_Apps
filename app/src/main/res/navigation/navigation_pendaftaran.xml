@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_pendaftaran"
+    app:startDestination="@id/stOneBuktiDaftarFragment">
+
+    <fragment
+        android:id="@+id/stFourKonfirmasiFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.daftar.StFourKonfirmasiFragment"
+        android:label="fragment_st_four_konfirmasi"
+        tools:layout="@layout/fragment_st_four_konfirmasi" >
+        <action
+            android:id="@+id/action_stFourKonfirmasiFragment_to_stThreePaketFragment"
+            app:destination="@id/stThreePaketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stOneBuktiDaftarFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.daftar.StOneBuktiDaftarFragment"
+        android:label="fragment_st_one_bukti_daftar"
+        tools:layout="@layout/fragment_st_one_bukti_daftar" >
+        <action
+            android:id="@+id/action_stOneBuktiDaftarFragment_to_stTwoProgramFragment"
+            app:destination="@id/stTwoProgramFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stThreePaketFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.daftar.StThreePaketFragment"
+        android:label="fragment_st_three_paket"
+        tools:layout="@layout/fragment_st_three_paket" >
+        <action
+            android:id="@+id/action_stThreePaketFragment_to_stTwoProgramFragment"
+            app:destination="@id/stTwoProgramFragment" />
+        <action
+            android:id="@+id/action_stThreePaketFragment_to_stFourKonfirmasiFragment"
+            app:destination="@id/stFourKonfirmasiFragment" />
+        <action
+            android:id="@+id/action_stThreePaketFragment_to_buatPaketKonversiFragment"
+            app:destination="@id/buatPaketKonversiFragment" />
+        <action
+            android:id="@+id/action_stThreePaketFragment_to_pilihPaketKonversiFragment"
+            app:destination="@id/pilihPaketKonversiFragment" />
+        <action
+            android:id="@+id/action_stThreePaketFragment_to_pilihPaketKonversiFragment2"
+            app:destination="@id/pilihPaketKonversiFragment" />
+        <action
+            android:id="@+id/action_stThreePaketFragment_to_tambahMatkulFragment"
+            app:destination="@id/tambahMatkulFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stTwoProgramFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.daftar.StTwoProgramFragment"
+        android:label="fragment_st_two_program"
+        tools:layout="@layout/fragment_st_two_program" >
+        <action
+            android:id="@+id/action_stTwoProgramFragment_to_stOneBuktiDaftarFragment"
+            app:destination="@id/stOneBuktiDaftarFragment" />
+        <action
+            android:id="@+id/action_stTwoProgramFragment_to_stThreePaketFragment"
+            app:destination="@id/stThreePaketFragment" />
+        <action
+            android:id="@+id/action_stTwoProgramFragment_to_pilihProgramFragment"
+            app:destination="@id/pilihProgramFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pilihProgramFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.daftar.PilihProgramFragment"
+        android:label="fragment_pilih_program"
+        tools:layout="@layout/fragment_pilih_program" >
+        <action
+            android:id="@+id/action_pilihProgramFragment_to_stTwoProgramFragment"
+            app:destination="@id/stTwoProgramFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buatPaketKonversiFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.daftar.BuatPaketKonversiFragment"
+        android:label="fragment_buat_paket_konversi"
+        tools:layout="@layout/fragment_buat_paket_konversi" >
+        <action
+            android:id="@+id/action_buatPaketKonversiFragment_to_stThreePaketFragment"
+            app:destination="@id/stThreePaketFragment" />
+        <action
+            android:id="@+id/action_buatPaketKonversiFragment_to_tambahMatkulFragment"
+            app:destination="@id/tambahMatkulFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pilihPaketKonversiFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.daftar.PilihPaketKonversiFragment"
+        android:label="fragment_pilih_paket_konversi"
+        tools:layout="@layout/fragment_pilih_paket_konversi" >
+        <action
+            android:id="@+id/action_pilihPaketKonversiFragment_to_stThreePaketFragment"
+            app:destination="@id/stThreePaketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tambahMatkulFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.daftar.pagingtambahmk.TambahMatkulFragment"
+        android:label="fragment_tambah_matkul"
+        tools:layout="@layout/fragment_tambah_matkul" >
+        <action
+            android:id="@+id/action_tambahMatkulFragment_to_stThreePaketFragment"
+            app:destination="@id/stThreePaketFragment" />
+        <action
+            android:id="@+id/action_tambahMatkulFragment_to_buatPaketKonversiFragment"
+            app:destination="@id/buatPaketKonversiFragment" />
+    </fragment>
+</navigation>

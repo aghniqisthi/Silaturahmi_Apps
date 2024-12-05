@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECF3EE"
+    tools:context=".dosen.pembimbing.apprmagang.DetailMagangFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Persetujuan Paket Konversi"
+        app:titleTextAppearance="@style/BodyBold"
+        app:titleTextColor="@color/black" />
+
+    <ScrollView
+        android:id="@+id/scorllbiew"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_setujui"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Detail Mahasiswa"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/detail"
+                tools:layout_editor_absoluteX="20dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.github.captain_miao.optroundcardview.OptRoundCardView
+                        android:id="@+id/card_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        app:layout_constraintTop_toTopOf="@+id/card_luaran"
+                        app:optRoundCardBackgroundColor="#B8DE39"
+                        app:optRoundCardCornerRadius="10dp"
+                        app:optRoundCardLeftBottomCorner="false"
+                        app:optRoundCardRightBottomCorner="false">
+
+                        <TextView
+                            android:id="@id/txt_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:gravity="center"
+                            android:textColor="#465A03"
+                            android:textSize="14sp" />
+
+                    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="14dp">
+
+                        <TextView
+                            android:id="@+id/npm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="NPM"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_npm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/npm" />
+
+                        <TextView
+                            android:id="@+id/nama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Nama Mahasiswa"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_npm" />
+
+                        <TextView
+                            android:id="@+id/txt_nama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/nama" />
+
+                        <TextView
+                            android:id="@+id/namaprodi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Nama Prodi"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_nama" />
+
+                        <TextView
+                            android:id="@+id/txt_namaprodi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/namaprodi" />
+
+
+                        <TextView
+                            android:id="@+id/nip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="NIP"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_namaprodi" />
+
+                        <TextView
+                            android:id="@+id/txt_nip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/nip" />
+
+                        <TextView
+                            android:id="@+id/namadospem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Nama Pembimbing MBKM"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_nip" />
+
+                        <TextView
+                            android:id="@+id/txt_namadospem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/namadospem" />
+
+                        <TextView
+                            android:id="@+id/posisi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Posisi Kegiatan Topik"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_namadospem" />
+
+                        <TextView
+                            android:id="@+id/txt_posisi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/posisi" />
+
+                        <TextView
+                            android:id="@+id/namamitra"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Nama Mitra/Perusahaan"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_posisi" />
+
+                        <TextView
+                            android:id="@+id/txt_namamitra"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/namamitra" />
+
+                        <TextView
+                            android:id="@+id/namaprogram"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Nama Program"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_namamitra" />
+
+                        <TextView
+                            android:id="@+id/txt_namaprogram"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/namaprogram" />
+
+                        <TextView
+                            android:id="@+id/jenismbkm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Nama Jenis MBKM"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_namaprogram" />
+
+                        <TextView
+                            android:id="@+id/txt_jenismbkm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/jenismbkm" />
+
+                        <TextView
+                            android:id="@+id/buktidaftar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Bukti Pendaftaran"
+                            android:textSize="14sp"
+                            app:layout_constraintTop_toBottomOf="@id/txt_jenismbkm" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_filebuktidaftar"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Lihat Dokumen"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="#458654"
+                            android:textSize="14sp"
+                            app:icon="@drawable/outline_text_snippet_24"
+                            app:iconPadding="10dp"
+                            app:layout_constraintTop_toBottomOf="@id/buktidaftar"
+                            app:strokeColor="#458654" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/green"
+                android:indeterminateTintMode="src_atop"
+                android:translationZ="50dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/paketkonversi"
+                app:layout_constraintStart_toEndOf="@+id/paketkonversi"
+                app:layout_constraintTop_toTopOf="@+id/paketkonversi" />
+
+            <TextView
+                android:id="@+id/paketkonversi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Paket Konversi"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_paketkonversi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/paketkonversi"
+                tools:layout_editor_absoluteX="20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="14dp">
+
+                    <TextView
+                        android:id="@+id/txt_namapaketkonversi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Paket Konversi"
+                        android:textColor="@color/green"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt_descpaketkonversi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Deskripsi paket konversi"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_namapaketkonversi" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_hidden"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/txt_descpaketkonversi">
+
+                        <TableLayout
+                            android:id="@+id/tableLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TableRow
+                                android:id="@+id/tableRow"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="4dp" />
+
+                        </TableLayout>
+
+                        <TextView
+                            android:id="@+id/txt_totalsks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Total SKS : "
+                            android:textSize="14sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_tambah"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Tambah Mata Kuliah"
+                            android:textAllCaps="false" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_simpan"
+                            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Simpan"
+                            android:textAllCaps="false"
+                            android:enabled="false" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_setujui"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="6dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Setujui"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scorllbiew" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_verif"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/green"
+        android:indeterminateTintMode="src_atop"
+        android:translationZ="50dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_setujui"
+        app:layout_constraintEnd_toEndOf="@+id/btn_setujui"
+        app:layout_constraintStart_toStartOf="@+id/btn_setujui"
+        app:layout_constraintTop_toTopOf="@+id/btn_setujui" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

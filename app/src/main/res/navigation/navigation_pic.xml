@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_pic"
+    app:startDestination="@id/homeDosenFragment">
+
+    <fragment
+        android:id="@+id/homeDosenFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.HomeDosenFragment"
+        android:label="fragment_home_dosen"
+        tools:layout="@layout/fragment_home_dosen" >
+        <action
+            android:id="@+id/action_homeDosenFragment_to_posisiFragment"
+            app:destination="@id/posisiPicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.upnvjatim.silaturahmi.mahasiswa.homenavbar.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/posisiPicFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.pic.underconst.PosisiFragment"
+        android:label="fragment_posisi"
+        tools:layout="@layout/fragment_posisi" />
+    <fragment
+        android:id="@+id/magangPicFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.pic.underconst.MagangPicFragment"
+        android:label="fragment_magang_pic"
+        tools:layout="@layout/fragment_magang_pic" />
+    <fragment
+        android:id="@+id/mbkmPicFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.pic.MbkmPicFragment"
+        android:label="fragment_mbkm_pic"
+        tools:layout="@layout/fragment_mbkm_pic" >
+        <action
+            android:id="@+id/action_mbkmPicFragment_to_detailRevisiNilaiFragment"
+            app:destination="@id/detailRevisiNilaiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailRevisiNilaiFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.pic.DetailRevisiNilaiFragment"
+        android:label="fragment_detail_revisi_nilai"
+        tools:layout="@layout/fragment_detail_revisi_nilai" >
+        <action
+            android:id="@+id/action_detailRevisiNilaiFragment_to_mbkmPicFragment"
+            app:destination="@id/mbkmPicFragment" />
+        <action
+            android:id="@+id/action_detailRevisiNilaiFragment_to_revisiNilaiFragment"
+            app:destination="@id/revisiNilaiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/revisiNilaiFragment"
+        android:name="com.upnvjatim.silaturahmi.dosen.pic.RevisiNilaiFragment"
+        android:label="fragment_revisi_nilai"
+        tools:layout="@layout/fragment_revisi_nilai" >
+        <action
+            android:id="@+id/action_revisiNilaiFragment_to_detailRevisiNilaiFragment"
+            app:destination="@id/detailRevisiNilaiFragment" />
+    </fragment>
+</navigation>
