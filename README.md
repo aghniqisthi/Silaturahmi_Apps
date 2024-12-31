@@ -8,7 +8,7 @@
   </p>
   
  <div align="center" style="max-height: 40px;">
-    <a href=" https://play.google.com/store/apps/details?id=com.upnvjatim.silaturahmi">
+    <a href="https://play.google.com/store/apps/details?id=com.upnvjatim.silaturahmi">
         <img src="https://github.com/user-attachments/assets/66d91063-ced9-4322-b77b-abdd4391eea5" height="40">
     </a>
  </div>
