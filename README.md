@@ -25,6 +25,6 @@ Key feature sets include .
 
 ### Credits
 
-Development by Aghni Qisthina Al Rahma
-UI by Ayu Andhini Mutya Karin
+Development by Aghni Qisthina Al Rahma </br>
+UI by Ayu Andhini Mutya Karin </br>
 Maintainance by UPA TIK UPN Veteran Jawa Timur.
