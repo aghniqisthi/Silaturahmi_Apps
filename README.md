@@ -25,4 +25,6 @@ Key feature sets include .
 
 ### Credits
 
-This application UI developed by Ayu Andhini Mutya Karin and maintained by UPA TIK UPN Veteran Jawa Timur.
+Development by Aghni Qisthina Al Rahma
+UI by Ayu Andhini Mutya Karin
+Maintainance by UPA TIK UPN Veteran Jawa Timur.
