@@ -1,7 +1,6 @@
 <div align="center">
-<a href="https://frappehealth.com">
-    <img src="https://github.com/aghniqisthi/Silaturahmi_Apps/blob/main/app/src/main/res/drawable/splash.png" height="128" alt="Silaturahmi Logo">
-  </a>
+ <img src="https://github.com/aghniqisthi/Silaturahmi_Apps/blob/main/app/src/main/res/drawable/splash.png" height="128" alt="Silaturahmi Logo">
+  
   <h2>Silaturahmi UPN Veteran Jawa Timur</h2>
   <p align="center">
     <p>Easy-to-use MBKM information system for student and lecturer.</p>
